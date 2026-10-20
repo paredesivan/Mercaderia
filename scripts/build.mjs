@@ -1,0 +1,14 @@
+import fs from 'node:fs/promises';
+import {stores,plans} from '../src/core.mjs';
+const catalog=JSON.parse(await fs.readFile('data/catalogo.json','utf8'));
+const snapshot=JSON.parse(await fs.readFile('data/precios.json','utf8'));
+if(catalog.length!==50||!Array.isArray(snapshot.records))throw Error('Datos inválidos');
+const safe=x=>JSON.stringify(x).replaceAll('<','\\u003c');
+const html=(await fs.readFile('src/page.html','utf8')).replace('__CATALOG__',safe(catalog)).replace('__STORES__',safe(stores)).replace('__PLANNER__',plans.toString().replaceAll('stores','STORES')).replace('__SNAPSHOT__',safe(snapshot));
+new Function(html.match(/<script>([\s\S]*)<\/script>/)[1]);
+await fs.writeFile('index.html',html);
+await fs.mkdir('_site/data',{recursive:true});
+await fs.copyFile('index.html','_site/index.html');
+await fs.copyFile('data/precios.json','_site/data/precios.json');
+await fs.writeFile('_site/.nojekyll','');
+console.log('HTML completo generado:',catalog.length,'artículos,',snapshot.records.length,'precios observados');

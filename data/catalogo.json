@@ -1,0 +1,537 @@
+[
+  {
+    "id": "1",
+    "name": "Manteca",
+    "category": "Lácteos",
+    "amount": 200,
+    "unit": "g",
+    "query": "manteca",
+    "include": "^manteca\\b",
+    "exclude": "mani|vegetal|margarina"
+  },
+  {
+    "id": "2",
+    "name": "Leche entera",
+    "category": "Lácteos",
+    "amount": 1000,
+    "unit": "ml",
+    "query": "leche entera",
+    "include": "^leche\\b.*entera",
+    "exclude": "polvo|condensada|vegetal|chocolat"
+  },
+  {
+    "id": "3",
+    "name": "Huevos",
+    "category": "Frescos",
+    "amount": 12,
+    "unit": "u",
+    "query": "huevos",
+    "include": "^(huevos?|maple\\b.*huevo)",
+    "exclude": "chocolate|pascua"
+  },
+  {
+    "id": "4",
+    "name": "Queso cremoso",
+    "category": "Lácteos",
+    "amount": 500,
+    "unit": "g",
+    "query": "queso cremoso",
+    "include": "^queso\\b.*cremoso",
+    "exclude": "untable|light"
+  },
+  {
+    "id": "5",
+    "name": "Yogur",
+    "category": "Lácteos",
+    "amount": 1000,
+    "unit": "g",
+    "query": "yogur",
+    "include": "^yogur",
+    "exclude": "vegetal|bebible"
+  },
+  {
+    "id": "6",
+    "name": "Crema de leche",
+    "category": "Lácteos",
+    "amount": 200,
+    "unit": "g",
+    "query": "crema de leche",
+    "include": "^crema de leche",
+    "exclude": "vegetal"
+  },
+  {
+    "id": "7",
+    "name": "Dulce de leche",
+    "category": "Lácteos",
+    "amount": 400,
+    "unit": "g",
+    "query": "dulce de leche",
+    "include": "^dulce de leche",
+    "exclude": "sin azucar|repostero"
+  },
+  {
+    "id": "8",
+    "name": "Queso rallado",
+    "category": "Lácteos",
+    "amount": 100,
+    "unit": "g",
+    "query": "queso rallado",
+    "include": "^queso.*rallado",
+    "exclude": "vegetal"
+  },
+  {
+    "id": "9",
+    "name": "Arroz blanco",
+    "category": "Almacén",
+    "amount": 1000,
+    "unit": "g",
+    "query": "arroz largo fino",
+    "include": "^arroz\\b.*largo",
+    "exclude": "integral|yaman|risotto|listo|galleta"
+  },
+  {
+    "id": "10",
+    "name": "Fideos secos",
+    "category": "Almacén",
+    "amount": 500,
+    "unit": "g",
+    "query": "fideos",
+    "include": "^(fideos|pasta seca)\\b",
+    "exclude": "integral|sin tacc|rellen|arroz|sopa"
+  },
+  {
+    "id": "11",
+    "name": "Harina de trigo 000",
+    "category": "Almacén",
+    "amount": 1000,
+    "unit": "g",
+    "query": "harina 000",
+    "include": "^harina\\b.*(?:000\\b|trigo)",
+    "exclude": "0000|leudante|integral"
+  },
+  {
+    "id": "12",
+    "name": "Azúcar",
+    "category": "Almacén",
+    "amount": 1000,
+    "unit": "g",
+    "query": "azucar",
+    "include": "^azucar\\b",
+    "exclude": "impalpable|mascabo|negra|rubia|edulcor"
+  },
+  {
+    "id": "13",
+    "name": "Sal fina",
+    "category": "Almacén",
+    "amount": 500,
+    "unit": "g",
+    "query": "sal fina",
+    "include": "^sal fina\\b",
+    "exclude": "light"
+  },
+  {
+    "id": "14",
+    "name": "Aceite de girasol",
+    "category": "Almacén",
+    "amount": 900,
+    "unit": "ml",
+    "query": "aceite girasol",
+    "include": "^aceite\\b.*girasol",
+    "exclude": "mezcla|oliva|aerosol"
+  },
+  {
+    "id": "15",
+    "name": "Yerba mate",
+    "category": "Almacén",
+    "amount": 1000,
+    "unit": "g",
+    "query": "yerba",
+    "include": "^yerba\\b",
+    "exclude": "compuesta|sabor|organica",
+    "queries": [
+      "yerba",
+      "yerba mate"
+    ]
+  },
+  {
+    "id": "16",
+    "name": "Café molido",
+    "category": "Almacén",
+    "amount": 250,
+    "unit": "g",
+    "query": "cafe",
+    "include": "^cafe\\b.*(molido|tostado|torrado)",
+    "exclude": "capsula|soluble|instantaneo|bebida",
+    "queries": [
+      "cafe",
+      "cafe molido",
+      "cafe tostado"
+    ]
+  },
+  {
+    "id": "17",
+    "name": "Té negro",
+    "category": "Almacén",
+    "amount": 25,
+    "unit": "u",
+    "query": "te negro",
+    "include": "^te\\b",
+    "exclude": "verde|rojo|hierbas|manzanilla|chai|limon|canela|intizen|organico",
+    "queries": [
+      "te negro",
+      "te"
+    ]
+  },
+  {
+    "id": "18",
+    "name": "Cacao en polvo",
+    "category": "Almacén",
+    "amount": 180,
+    "unit": "g",
+    "query": "cacao polvo",
+    "include": "^(cacao|chocolat).*",
+    "exclude": "barra|tableta|gallet"
+  },
+  {
+    "id": "19",
+    "name": "Puré de tomate",
+    "category": "Almacén",
+    "amount": 520,
+    "unit": "g",
+    "query": "pure tomate",
+    "include": "^pure\\b.*tomate",
+    "exclude": "condiment"
+  },
+  {
+    "id": "20",
+    "name": "Lentejas secas",
+    "category": "Almacén",
+    "amount": 400,
+    "unit": "g",
+    "query": "lentejas",
+    "include": "^lentej",
+    "exclude": "lata|cocid|tetra|conserva"
+  },
+  {
+    "id": "21",
+    "name": "Arvejas en lata",
+    "category": "Almacén",
+    "amount": 300,
+    "unit": "g",
+    "query": "arvejas",
+    "include": "^arvejas",
+    "exclude": "secas|congel"
+  },
+  {
+    "id": "22",
+    "name": "Atún en lata",
+    "category": "Almacén",
+    "amount": 170,
+    "unit": "g",
+    "query": "atun",
+    "include": "^atun\\b",
+    "exclude": "pat[eé]|ensalada"
+  },
+  {
+    "id": "23",
+    "name": "Polenta",
+    "category": "Almacén",
+    "amount": 500,
+    "unit": "g",
+    "query": "polenta",
+    "include": "^(polenta|harina de maiz)",
+    "exclude": "sabor"
+  },
+  {
+    "id": "24",
+    "name": "Pan lactal",
+    "category": "Panificados",
+    "amount": 500,
+    "unit": "g",
+    "query": "pan lactal",
+    "include": "^pan\\b",
+    "exclude": "integral|salvado|hamburg|pancho|rallado|dulce"
+  },
+  {
+    "id": "25",
+    "name": "Galletitas de agua",
+    "category": "Panificados",
+    "amount": 300,
+    "unit": "g",
+    "query": "galletitas agua",
+    "include": "^(galletitas|galletas|crackers)",
+    "exclude": "dulce|rellen|choco|avena|arroz"
+  },
+  {
+    "id": "26",
+    "name": "Galletitas dulces",
+    "category": "Panificados",
+    "amount": 300,
+    "unit": "g",
+    "query": "galletitas dulces",
+    "include": "^(galletitas|galletas)",
+    "exclude": "saladas|agua|arroz"
+  },
+  {
+    "id": "27",
+    "name": "Mermelada",
+    "category": "Almacén",
+    "amount": 454,
+    "unit": "g",
+    "query": "mermelada",
+    "include": "^mermelada",
+    "exclude": "light|sin azucar"
+  },
+  {
+    "id": "28",
+    "name": "Mayonesa",
+    "category": "Almacén",
+    "amount": 475,
+    "unit": "g",
+    "query": "mayonesa",
+    "include": "^mayonesa",
+    "exclude": "vegana|light"
+  },
+  {
+    "id": "29",
+    "name": "Vinagre de alcohol",
+    "category": "Almacén",
+    "amount": 1000,
+    "unit": "ml",
+    "query": "vinagre alcohol",
+    "include": "^vinagre.*alcohol",
+    "exclude": ""
+  },
+  {
+    "id": "30",
+    "name": "Pan rallado",
+    "category": "Almacén",
+    "amount": 500,
+    "unit": "g",
+    "query": "pan rallado",
+    "include": "^pan rallado",
+    "exclude": "rebozador"
+  },
+  {
+    "id": "31",
+    "name": "Gaseosa cola",
+    "category": "Bebidas",
+    "amount": 2250,
+    "unit": "ml",
+    "query": "gaseosa cola",
+    "include": "^(gaseosa|coca cola|pepsi)",
+    "exclude": "zero|sin azucar|light"
+  },
+  {
+    "id": "32",
+    "name": "Agua mineral",
+    "category": "Bebidas",
+    "amount": 2000,
+    "unit": "ml",
+    "query": "agua mineral sin gas",
+    "include": "^agua\\b",
+    "exclude": "sabor|con gas|tonica"
+  },
+  {
+    "id": "33",
+    "name": "Soda",
+    "category": "Bebidas",
+    "amount": 2000,
+    "unit": "ml",
+    "query": "soda",
+    "include": "^soda\\b",
+    "exclude": "gallet"
+  },
+  {
+    "id": "34",
+    "name": "Jugo en polvo",
+    "category": "Bebidas",
+    "amount": 1,
+    "unit": "u",
+    "query": "jugo en polvo",
+    "include": "^(jugo|bebida).*polvo",
+    "exclude": "",
+    "singleUnit": true,
+    "queries": [
+      "jugo en polvo",
+      "jugo polvo"
+    ]
+  },
+  {
+    "id": "35",
+    "name": "Papa",
+    "category": "Frescos",
+    "amount": 1000,
+    "unit": "g",
+    "query": "papa",
+    "include": "^papas?\\b",
+    "exclude": "frita|congel|pure|noisette"
+  },
+  {
+    "id": "36",
+    "name": "Cebolla",
+    "category": "Frescos",
+    "amount": 1000,
+    "unit": "g",
+    "query": "cebolla",
+    "include": "^cebolla\\b",
+    "exclude": "polvo|verdeo|deshidrat|aro"
+  },
+  {
+    "id": "37",
+    "name": "Tomate redondo",
+    "category": "Frescos",
+    "amount": 1000,
+    "unit": "g",
+    "query": "tomate redondo",
+    "include": "^tomate.*redondo",
+    "exclude": "lata|pure|salsa",
+    "queries": [
+      "tomate redondo",
+      "tomate"
+    ]
+  },
+  {
+    "id": "38",
+    "name": "Banana",
+    "category": "Frescos",
+    "amount": 1000,
+    "unit": "g",
+    "query": "banana",
+    "include": "^bananas?\\b",
+    "exclude": "deshidrat|dulce"
+  },
+  {
+    "id": "39",
+    "name": "Manzana roja",
+    "category": "Frescos",
+    "amount": 1000,
+    "unit": "g",
+    "query": "manzana roja",
+    "include": "^manzana.*roja",
+    "exclude": "jugo|sidra|pure",
+    "queries": [
+      "manzana roja",
+      "manzana"
+    ]
+  },
+  {
+    "id": "40",
+    "name": "Zanahoria",
+    "category": "Frescos",
+    "amount": 1000,
+    "unit": "g",
+    "query": "zanahoria",
+    "include": "^zanahoria",
+    "exclude": "conserva|jugo"
+  },
+  {
+    "id": "41",
+    "name": "Pollo entero",
+    "category": "Carnes",
+    "amount": 2000,
+    "unit": "g",
+    "query": "pollo entero",
+    "include": "^pollo\\b.*entero",
+    "exclude": "rebozad|rellen"
+  },
+  {
+    "id": "42",
+    "name": "Carne picada",
+    "category": "Carnes",
+    "amount": 1000,
+    "unit": "g",
+    "query": "carne picada",
+    "include": "^(carne.*picada|picada)",
+    "exclude": "soja|cerdo"
+  },
+  {
+    "id": "43",
+    "name": "Papel higiénico",
+    "category": "Higiene",
+    "amount": 120,
+    "unit": "m",
+    "query": "papel higienico",
+    "include": "^papel higienico",
+    "exclude": "humedo"
+  },
+  {
+    "id": "44",
+    "name": "Rollo de cocina",
+    "category": "Limpieza",
+    "amount": 150,
+    "unit": "hojas",
+    "query": "rollo de cocina",
+    "include": "^(rollo|papel).*cocina",
+    "exclude": "",
+    "queries": [
+      "rollo de cocina",
+      "rollo cocina",
+      "papel cocina"
+    ]
+  },
+  {
+    "id": "45",
+    "name": "Detergente",
+    "category": "Limpieza",
+    "amount": 750,
+    "unit": "ml",
+    "query": "detergente",
+    "include": "^detergente",
+    "exclude": "lavavajilla|maquina|capsula"
+  },
+  {
+    "id": "46",
+    "name": "Lavandina",
+    "category": "Limpieza",
+    "amount": 1000,
+    "unit": "ml",
+    "query": "lavandina",
+    "include": "^lavandina",
+    "exclude": "gel|ropa"
+  },
+  {
+    "id": "47",
+    "name": "Jabón líquido para ropa",
+    "category": "Limpieza",
+    "amount": 3000,
+    "unit": "ml",
+    "query": "jabon liquido ropa",
+    "include": "^jabon.*liquido",
+    "exclude": "manos|tocador|corporal"
+  },
+  {
+    "id": "48",
+    "name": "Jabón de tocador",
+    "category": "Higiene",
+    "amount": 90,
+    "unit": "g",
+    "query": "jabon tocador",
+    "include": "^jabon.*tocador",
+    "exclude": "liquido"
+  },
+  {
+    "id": "49",
+    "name": "Pasta dental",
+    "category": "Higiene",
+    "amount": 90,
+    "unit": "g",
+    "query": "crema dental",
+    "include": "^(crema|pasta).*dental",
+    "exclude": "infantil|nino",
+    "queries": [
+      "crema dental",
+      "pasta dental"
+    ]
+  },
+  {
+    "id": "50",
+    "name": "Shampoo",
+    "category": "Higiene",
+    "amount": 400,
+    "unit": "ml",
+    "query": "shampoo",
+    "include": "^(shampoo|champu)",
+    "exclude": "mascota|perro|seco"
+  }
+]
