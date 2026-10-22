@@ -3,7 +3,7 @@ export const stores=[
 {id:'coto',name:'Coto',url:'https://www.cotodigital.com.ar',type:'coto'},
 {id:'libertad',name:'Libertad',url:'https://www.hiperlibertad.com.ar',type:'vtex'},
 {id:'gallega',name:'La Gallega',url:'https://www.lagallega.com.ar',type:'asp'},
-{id:'mas',name:'ChangoMás',url:'https://www.masonline.com.ar',type:'vtex'},
+{id:'microgo',name:'MicroGo / Micropack',url:'https://www.microgo.com.ar',type:'vtex',note:'Tienda online con envío y retiro en Rosario; precio online sin sucursal específica.'},
 {id:'jumbo',name:'Jumbo',url:'https://www.jumbo.com.ar',type:'vtex'},
 {id:'dia',name:'Día',url:'https://diaonline.supermercadosdia.com.ar',type:'vtex',planningEligible:false,note:'Referencia online: no se confirmó sucursal o entrega en Rosario. No participa del plan de compras local.'},
 {id:'dar',name:'DAR',url:'https://darentucasa.com.ar',type:'asp'},
@@ -53,7 +53,10 @@ export function choose(products,item,store,now){
    }
   }
  }
- return candidates.sort((a,b)=>a.costCents-b.costCents||a.unitCostCents-b.unitCostCents)[0]||null;
+ if(!candidates.length)return null;
+ const purchase=[...candidates].sort((a,b)=>a.costCents-b.costCents||a.unitCostCents-b.unitCostCents)[0];
+ const comparison=[...candidates].sort((a,b)=>a.unitCostCents-b.unitCostCents||a.costCents-b.costCents)[0];
+ return {...purchase,comparison:{name:comparison.name,brand:comparison.brand,priceCents:comparison.priceCents,quantity:comparison.quantity,unit:comparison.unit,packs:comparison.packs,costCents:comparison.costCents,unitCostCents:comparison.unitCostCents,url:comparison.url}};
 }
 export function plans(items,records,maxStops=5,travelCents=0){
  if(!items.length)return null;

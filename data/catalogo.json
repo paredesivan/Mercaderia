@@ -23,7 +23,7 @@
     "id": "3",
     "name": "Huevos",
     "category": "Frescos",
-    "amount": 12,
+    "amount": 6,
     "unit": "u",
     "query": "huevos",
     "include": "^(huevos?|maple\\b.*huevo)",

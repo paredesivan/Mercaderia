@@ -4,6 +4,7 @@ Comparador de una canasta de **50 artículos habituales** para el hogar. No es u
 
 La web compara marcas distintas, muestra el producto concreto, su precio, fecha y enlace, y calcula:
 
+- Precio equivalente para una cantidad común y, por separado, precio real y presentación de cada envase.
 - Costo de los envases enteros necesarios para cada cantidad de referencia.
 - Total por supermercado, identificando subtotales incompletos.
 - Mejor combinación entre hasta cinco supermercados, con costo opcional por parada extra.
@@ -29,7 +30,7 @@ No se usan claves privadas, cuentas de supermercados ni sesiones del visitante. 
 |---|---|---|
 | Carrefour | Catálogo online con búsqueda por texto completo | Sucursal Rosario sin confirmar |
 | Coto | Catálogo online general, tienda 200 | No atribuir a una sucursal de Rosario |
-| ChangoMás | Catálogo online | Sucursal Rosario sin confirmar |
+| MicroGo / Micropack | Catálogo online | Envío y retiro en Rosario; precios online sin atribuir a una sucursal específica |
 | Jumbo | Catálogo online | Sucursal Rosario sin confirmar |
 | Día | Catálogo online de referencia | No se confirmó presencia o entrega en Rosario; fuera del plan local |
 | La Gallega | Buscador público y hasta dos páginas de resultados | Stock final por confirmar |
@@ -43,6 +44,8 @@ La canasta tiene cobertura para los **50 artículos entre las fuentes disponible
 Los precios vencen a las 36 horas para los cálculos. Las consultas fallidas conservan el registro y la fecha anteriores. No se presenta un faltante como precio cero. Las búsquedas revisan hasta 50 resultados en catálogos VTEX y hasta dos páginas en los buscadores HTML: el mínimo observado no garantiza ser el menor de todo el catálogo.
 
 Se corrigieron el uso del buscador de texto completo, los espacios codificados, las unidades en saquitos y sobres, formatos como 3x60 hojas, gramos escritos como gm y grados de harina como 000x1kg. Las comparaciones se regeneran con la versión 2 del normalizador; no se reutilizan cantidades de la versión anterior sin revisarlas.
+
+Cada artículo usa una cantidad de referencia única en todas las tiendas (por ejemplo, huevos por 6 unidades). La tabla ordena por precio equivalente para esa cantidad, pero muestra también la presentación real y el precio real del envase. Los totales y el plan de compras usan solamente envases enteros y distinguen el menor desembolso del mejor precio proporcional cuando no coinciden.
 
 No se incluyen beneficios bancarios, membresías, promociones por cantidad, costos de envío ni rutas. Las categorías son genéricas: revisar variantes y calidades en el producto enlazado. La extracción puede requerir mantenimiento si las tiendas cambian su catálogo. Los adaptadores HTML muestran precios publicados; la disponibilidad final se confirma en la tienda.
 
